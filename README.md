@@ -3,10 +3,8 @@
 ## Author
 Dr. Giovanna Dal Rì, Medical Doctor and Biomedical Engineer
 
-giovanna.dalri.doctor@proton.me
-
 ## Motivation
-The codes were implemented for an automatic bibliometric study submitted to a scientific journal.
+The scripts were implemented for an automatic bibliometric study submitted to a scientific journal.
 
 ## Description
 The code for extraction automatically retrieves the data of the articles in specific fields throughout specific periods. The extracted data are country of affiliation, authorship, journal and year of publication, and gender of the authors. 
@@ -15,8 +13,8 @@ The code for statistics analyses the obtained results, aiming at quantifying the
 
 ## Pipeline
 Extraction:
-1. Retrieval of PMIDs associated to specific queries and periods via NCBI API
-2. Filtering according to IF of journals
+1. Retrieval of PMIDs associated with specific queries and periods via NCBI API
+2. Filtering by Journal Impact Factor (IF)
 3. Filtering according to type of article (comments, letters, reviews, etc)
 4. Retrieval of immediate data:
   - Names and surnames of authors
@@ -37,14 +35,14 @@ Statistics:
 ### Extraction
 The code retrieves all the articles related to a specific query and time period via PubMed (NCBI). 
 Specific data were then retrieved directly from PubMed via NCBI API, like PMIDs, the names and surnames of authors, their authorships, the journal of publication, and the year of publication.
-The gender of the authors was retrieved via the gender_guesser library, which interferes gender from names. 
+The gender of the authors was retrieved via the gender_guesser library, which inferes gender from names. 
 The country of affiliation of the authors was obtained via the OpenAlex API, using the PMIDs of the articles.
 
 Only the papers published on a journal with IF>=2 are kept, to investigate only high-impact journals. Moreover, non peer-reviewed scientific articles, such as comments or letters to the editor, were removed.
 
-Unfortunately, countries like China and Taiwan do not allow interference of gender from names, due to reasons deeply-rooted in their culture. Accordingly, authors having affiliations in China and Taiwan were removed from the dataset, reducing significantly the risk of misgender and bias. 
+Unfortunately, countries like China and Taiwan do not allow gender inference from names, due to reasons deeply-rooted in their culture. Accordingly, authors having affiliations in China and Taiwan were removed from the dataset, reducing significantly the risk of misgender and bias. 
 
-A PRISMA pipeline was followed throughoutly.
+A PRISMA pipeline was followed throughout.
 
 ### Statistics
 The number and percentage of women as general, first and last authors were computed. Moreover, Chi-Squared Tests of Independence comparing the observed distribution of women and men authors against a 50/50 distribution were conducted. A p-value < 0.05 was considered statistically significant. Gendered authorship combinations were analysed, to discover the distributions of women and men in junior and senior roles. 
@@ -58,22 +56,28 @@ Moreover, yearly trends of women as first and last authors were also computed pe
 
 Finally, the percentage of women as first and last authors was studied per each journal of publication.
    
-In order to maintain statistical significance, a threshold was applied to both the number of articles published on certain journals and in certain countries. In this way, the low research outputs of certain journals and countries would not compromise the statistics.
+In order to maintain statistical significance, a threshold was applied to both the number of articles published on specific journals and countries. In this way, the low-output journals and countries would not compromise the statistics.
 
 ## Results
 The  following histogram shows the gendered authorships combinations:
 
+<div align="center">
 <img width="475" height="301" alt="Figure2" src="https://github.com/user-attachments/assets/0cd17e0e-5fb9-4d91-94f6-2748879ab1d0" />
+</div>
 
 The yearly trend for two of the countries is shown in the following plot:
 
-<img width="529" height="544" alt="Figure6" src="https://github.com/user-attachments/assets/f6771829-da47-4e08-9c2b-910227dab66a" />
+<div align="center">
+<img width="525" height="540" alt="Figure6" src="https://github.com/user-attachments/assets/f6771829-da47-4e08-9c2b-910227dab66a" />
+</div>
 
 The percentages of women first and last authors per journal of publication are shown in the following barplot:
 
-<img width="559" height="609" alt="Figure7" src="https://github.com/user-attachments/assets/31c60871-49ef-4ea4-baa1-8ba8835a4609" />
+<div align="center">
+<img width="525" height="575" alt="Figure7" src="https://github.com/user-attachments/assets/31c60871-49ef-4ea4-baa1-8ba8835a4609" />
+</div>
 
-For complete results, please check out the published paper.
+For complete results, please refer to the forthcoming manuscript.
 
 ## Limitations
 A notable limitation is gender inference based on names, which may introduce classification errors. Moreover, only binary gender categories were considered, as non-binary identities cannot be determined solely from names, introducing a potential bias in gender classification.
@@ -86,6 +90,9 @@ Although PubMed remains the most comprehensive biomedical database, reliance on 
 
 ## Tech Stack
 * Language: Python 3.10+
+* Libraries: see requirements.txt
+* OpenAlex API Key
+* NCBI API Key
 
 ## License
 This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
@@ -99,10 +106,10 @@ If you use this code, the extraction pipeline, or the statistical analysis in yo
 
 **BibTeX:**
 ```bibtex
-@software{DalRì2026,
+@software{DalRi2026,
   author = {Dal Rì, Giovanna},
   title = {Automatic Bibliometric Study},
   year = {2026},
   version = {v1.0.0},
-  url = {[[https://github.com/tuo-username/nome-repository](https://github.com/DrGiovannaDalRi/Automatic-Bibliometric-Study)]
+  url = {[(https://github.com/DrGiovannaDalRi/Automatic-Bibliometric-Study)]
 }
