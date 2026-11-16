@@ -47,17 +47,62 @@ Unfortunately, countries like China and Taiwan do not allow interference of gend
 A PRISMA pipeline was followed throughoutly.
 
 ### Statistics
-1. Number and percentage of women as first and last authors
-2. Computation of Chi-Squared Values
-3. Yearly trends of women as first and last authors throughout the study period
-4. Percentage of women as first and last authors per each country of affiliation
-5. Yearly trends of women as first and last authors per each country of affiliation
-6. Percentage of women as first and last authors per each journal of publication
-   
-In order to maintain the statistical significance, a threshold was applied to both the number of articles published on certain journals and in certain countries. In this way, the low research outputs of certain journals and countries would not compromise the statistics.
+The number and percentage of women as general, first and last authors were computed. Moreover, Chi-Squared Tests of Independence comparing the observed distribution of women and men authors against a 50/50 distribution were conducted. A p-value < 0.05 was considered statistically significant. Gendered authorship combinations were analysed, to discover the distributions of women and men in junior and senior roles. 
 
+The percentages of women authors were computed across the study period. In addition, a Chi-Squared test was performed for each year, comparing the observed proportions of women and men in first and last authorship against an expected 50/50 distribution. 
+
+Yearly trends of women as first and last authors throughout the study period were studied, producing a time plot. Moreover, the different growth between first and last authors was analysed, aiming at producing a Gender Representation Gap (GRG) curve.
+
+The percentage of women as first and last authors was also analysed per each country of affiliation, discovering which countries had the highest percentage of women first and last authors and which, on the other hand, had the highest gender gap. 
+Moreover, yearly trends of women as first and last authors were also computed per each country, in order to analyse the growth of women authors in each nation, especially the best and the worst ones.
+
+Finally, the percentage of women as first and last authors was studied per each journal of publication.
+   
+In order to maintain statistical significance, a threshold was applied to both the number of articles published on certain journals and in certain countries. In this way, the low research outputs of certain journals and countries would not compromise the statistics.
 
 ## Results
-The code was used to study the gender gap in neurosurgery across all countries and high-impact journals.
+The  following histogram shows the gendered authorships combinations:
+
+<img width="475" height="301" alt="Figure2" src="https://github.com/user-attachments/assets/0cd17e0e-5fb9-4d91-94f6-2748879ab1d0" />
+
+The yearly trend for two of the countries is shown in the following plot:
+
+<img width="529" height="544" alt="Figure6" src="https://github.com/user-attachments/assets/f6771829-da47-4e08-9c2b-910227dab66a" />
+
+The percentages of women first and last authors per journal of publication are shown in the following barplot:
+
+<img width="559" height="609" alt="Figure7" src="https://github.com/user-attachments/assets/31c60871-49ef-4ea4-baa1-8ba8835a4609" />
+
+For complete results, please check out the published paper.
 
 ## Limitations
+A notable limitation is gender inference based on names, which may introduce classification errors. Moreover, only binary gender categories were considered, as non-binary identities cannot be determined solely from names, introducing a potential bias in gender classification.
+
+Removing China and Taiwan from the study represents another notable limitation, but it was necessary to decrease the risk of misgendering, which would otherwise have been high.
+
+All the used thresholds, in both countries and journals, may limit the visibility of some countries or journals. However, they were implemented to improve the quality of the research and reduce the introduction of biases due to low output frequencies.
+
+Although PubMed remains the most comprehensive biomedical database, reliance on a single source may introduce structural biases in the composition of the dataset. 
+
+## Tech Stack
+* Language: Python 3.10+
+
+## License
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
+
+Under this license, you are free to use, modify, and distribute the code for academic or commercial purposes, provided that original authorship is attributed and modified files retain notices of changes.
+
+## Citation
+If you use this code, the extraction pipeline, or the statistical analysis in your research, please cite it as follows:
+
+> Dal Rì, 2026. *Automatic Bibliometric Study* (Version 1.0.0) [Computer software]. GitHub. https://github.com/DrGiovannaDalRi/Automatic-Bibliometric-Study
+
+**BibTeX:**
+```bibtex
+@software{DalRì2026,
+  author = {Dal Rì, Giovanna},
+  title = {Automatic Bibliometric Study},
+  year = {2026},
+  version = {v1.0.0},
+  url = {[[https://github.com/tuo-username/nome-repository](https://github.com/DrGiovannaDalRi/Automatic-Bibliometric-Study)]
+}
