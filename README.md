@@ -94,6 +94,9 @@ Although PubMed remains the most comprehensive biomedical database, reliance on 
 * OpenAlex API Key
 * NCBI API Key
 
+## Materials
+* JCRWantedJournals.xlsx contains all the journals with IF>=2, which cannot be published here 
+
 ## License
 This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
 
