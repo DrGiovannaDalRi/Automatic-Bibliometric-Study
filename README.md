@@ -17,10 +17,10 @@ Extraction:
 2. Filtering by Journal Impact Factor (IF)
 3. Filtering according to type of article (comments, letters, reviews, etc)
 4. Retrieval of immediate data:
-  - Names and surnames of authors
-  - Authorships
-  - Journal of publication
-  - Year of publication
+      - Names and surnames of authors
+      - Authorships
+      - Journal of publication
+      - Year of publication
 5. Retrieval of gender of authors, through gender_guesser library
 6. Retrieval of nationality of affiliation of authors via OpenAlex API (through PMIDs)
 
