@@ -109,7 +109,7 @@ If you use this code, the extraction pipeline, or the statistical analysis in yo
 
 **BibTeX:**
 ```bibtex
-@software{DalRi2026,
+@software{DalRi2026Bibliometric,
   author = {Dal Rì, Giovanna},
   title = {Automatic Bibliometric Study},
   year = {2026},
