@@ -1,0 +1,9 @@
+# Extraction
+requests
+gender-guesser
+
+# Statistics & Visualization
+pandas
+scipy
+matplotlib
+seaborn
