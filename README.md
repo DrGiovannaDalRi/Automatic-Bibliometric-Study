@@ -95,7 +95,7 @@ Although PubMed remains the most comprehensive biomedical database, reliance on 
 * NCBI API Key
 
 ## Materials
-* JCRWantedJournals.xlsx contains all the journals with IF>=2, which cannot be published here 
+* JCRWantedJournals.xlsx contains all the journals with IF>=2, which is proprietary data and cannot be published on GitHub
 
 ## License
 This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
